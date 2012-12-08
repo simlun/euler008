@@ -1,5 +1,8 @@
 #!/bin/bash
 
+lein clean
+lein compile
+
 EXPECTED="720"
 ACTUAL=`echo "1234561" | lein trampoline run`
 
