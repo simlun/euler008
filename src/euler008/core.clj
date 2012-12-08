@@ -1,6 +1,7 @@
 (ns euler008.core)
 
-(defn to-integer-list [input-string])
+(defn to-integer-list [input]
+  (map #(read-string (str %)) input))
 
 (defn find-greatest-product [])
 
