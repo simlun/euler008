@@ -3,5 +3,6 @@
                  [com.stuartsierra/lazytest "1.2.3"]
                  [midje "1.4.0"]]
   :plugins [[lein-midje "2.0.3" ]]
-  :repositories {"stuart" "http://stuartsierra.com/maven2"})
+  :repositories {"stuart" "http://stuartsierra.com/maven2"}
+  :main euler008.core)
 

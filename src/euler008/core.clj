@@ -19,3 +19,7 @@
 
 (defn mjao [input]
   (find-greatest-5product (to-integer-list input)))
+
+(defn -main [& args]
+  (println (mjao (read-line))))
+
