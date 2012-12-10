@@ -6,16 +6,16 @@
     b))
 
 (defn find-greatest-5product [numbers]
-  (defn- recursion [numbers current-max]
-    (let [next-numbers (rest numbers)
-          number-count (count numbers)
-          five-numbers (take 5 numbers)
+  (defn recursion [current-numbers current-greatest]
+    (let [number-count (count current-numbers)
           done (< number-count 5)
-          product (reduce * five-numbers)
-          greatest (greatest product current-max)]
+          five-consecutive-numbers (take 5 current-numbers)
+          product (reduce * five-consecutive-numbers)
+          next-numbers (rest current-numbers)
+          next-greatest (greatest product current-greatest)]
       (if done
-        current-max
-        (recursion next-numbers greatest))))
+        current-greatest
+        (recursion next-numbers next-greatest))))
   (recursion numbers 0))
 
 (defn string-to-integer-list [input]
