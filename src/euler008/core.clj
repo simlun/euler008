@@ -1,4 +1,5 @@
-(ns euler008.core)
+(ns euler008.core
+  (:gen-class))
 
 (defn- greatest [a b]
   (if (> a b)
